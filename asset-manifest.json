@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/asish-wedding-site/static/css/main.f4dfd554.chunk.css",
+    "main.js": "/asish-wedding-site/static/js/main.930e364c.chunk.js",
+    "main.js.map": "/asish-wedding-site/static/js/main.930e364c.chunk.js.map",
+    "runtime-main.js": "/asish-wedding-site/static/js/runtime-main.0efbea96.js",
+    "runtime-main.js.map": "/asish-wedding-site/static/js/runtime-main.0efbea96.js.map",
+    "static/js/2.bf285a4d.chunk.js": "/asish-wedding-site/static/js/2.bf285a4d.chunk.js",
+    "static/js/2.bf285a4d.chunk.js.map": "/asish-wedding-site/static/js/2.bf285a4d.chunk.js.map",
+    "index.html": "/asish-wedding-site/index.html",
+    "static/css/main.f4dfd554.chunk.css.map": "/asish-wedding-site/static/css/main.f4dfd554.chunk.css.map",
+    "static/js/2.bf285a4d.chunk.js.LICENSE.txt": "/asish-wedding-site/static/js/2.bf285a4d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/asish-wedding-site/static/media/welcomeArea.dc054a42.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0efbea96.js",
+    "static/js/2.bf285a4d.chunk.js",
+    "static/css/main.f4dfd554.chunk.css",
+    "static/js/main.930e364c.chunk.js"
+  ]
+}
