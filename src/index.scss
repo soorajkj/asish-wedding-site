@@ -59,6 +59,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
+  min-width: 250px;
 }
 
 header {
@@ -124,7 +125,7 @@ main::after {
 }
 main .landing-content img {
   max-height: 350px;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   width: auto\9; /* ie8 */
 }
