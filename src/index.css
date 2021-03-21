@@ -1,13 +1,309 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap");
+:root {
+  --clr-primary-accent: #1e7b67;
+  --clr-secondary-accent: #5e9a8d;
+  --clr-accent-font: #649e93;
+  --clr-primary-font: #212529;
+  --clr-secondary-font: #616263;
+  --clr-white-font: #fff;
+  --clr-gradient: linear-gradient(rgba(100, 158, 147, 0.5), rgba(0, 0, 0, 0.5));
+  --clr-gradient-light: rgba(192, 192, 192, 0.24);
+  --font-fancy: "Great Vibes", cursive;
+  --font-primary: "Mulish", sans-serif;
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --line-height: 1.5;
+  --letter-spacing: 0.03rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-selection {
+  background-color: transparent;
+}
+
+::selection {
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--clr-primary-accent);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  padding: 0px 10px;
+}
+
+header .header-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--clr-white-font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header-container a {
+  color: var(--clr-white-font);
+  font-family: var(--font-fancy);
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-container span {
+  padding: 0 10px;
+}
+
+header .header-container .mobile-menu button {
+  background-color: transparent;
+  color: var(--clr-white-font);
+  cursor: pointer;
+}
+
+header .header-container .mobile-menu svg {
+  font-size: 30px;
+  font-weight: var(--fw-regular);
+}
+
+main {
+  min-height: calc(100vh - 65px);
+  background-color: #000;
+  position: relative;
+}
+
+main::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  background: url(http://lavelo-react.wpocean.com/static/media/1.4390f2ac.jpg);
+  opacity: 0.5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+main .landing-content img {
+  height: 350px;
+  width: auto;
+}
+
+main .landing-content {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .text-content {
+  z-index: 5;
+  position: absolute;
+  color: var(--clr-white-font);
+  text-align: center;
+}
+
+main .text-content h4 {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 15px;
+}
+
+main .text-content h2 {
+  font-weight: var(--fw-extra-light);
+  font-family: var(--font-fancy);
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.couple {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 65px auto;
+}
+
+.couple h2 {
+  font-family: var(--font-fancy);
+  color: var(--clr-accent-font);
+  font-size: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.couple .couple-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.couple .couple-tile .tile-seperator img {
+  height: 150px;
+}
+
+.couple .couple-tile .bride,
+.couple .couple-tile .groom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  font-family: var(--font-primary);
+}
+
+.couple .couple-tile .tile-image {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.couple .couple-tile .name {
+  margin-bottom: 15px;
+  color: var(--clr-secondary-accent);
+}
+
+.couple .couple-tile .detail {
+  font-size: 13px;
+  text-align: center;
+}
+
+.welcome-area {
+  background-color: var(--clr-primary-font);
+  background-image: url(Assets/welcomeArea.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: var(--clr-white-font);
+  padding: 20px;
+}
+
+.welcome-area h2 {
+  font-family: var(--font-fancy);
+  font-size: 40px;
+  font-weight: var(--fw-light);
+  margin-bottom: 20px;
+}
+
+.welcome-area p {
+  max-width: 600px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.welcome-area button {
+  padding: 10px 35px;
+  border-radius: 20px;
+  color: var(--clr-primary-accent);
+  font-size: 14px;
+  font-weight: bolder;
+  letter-spacing: var(--letter-spacing);
+  cursor: pointer;
+}
+
+.welcome-area button:hover {
+  background-color: #1e7b67;
+  color: var(--clr-white-font);
+}
+
+@media screen and (max-width: 600px) {
+  main .landing-content img {
+    height: 270px;
+    width: auto;
+  }
+  .couple-tile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .couple-tile .tile-seperator {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */

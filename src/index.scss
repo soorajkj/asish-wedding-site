@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap");
+
+:root {
+  // COLORS
+  --clr-primary-accent: #1e7b67;
+  --clr-secondary-accent: #5e9a8d;
+  --clr-accent-font: #649e93;
+  --clr-primary-font: #212529;
+  --clr-secondary-font: #616263;
+  --clr-white-font: #fff;
+  --clr-gradient: linear-gradient(rgba(100, 158, 147, 0.5), rgba(0, 0, 0, 0.5));
+  --clr-gradient-light: rgba(192, 192, 192, 0.24);
+
+  // FONTS
+  --font-fancy: "Great Vibes", cursive;
+  --font-primary: "Mulish", sans-serif;
+
+  // FONT WEIGHTS
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+
+  // EXTRA
+  --line-height: 1.5;
+  --letter-spacing: 0.03rem;
+}
+
+// RESETS AND DEFAULTS
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+:focus {
+  outline: none;
+}
+::selection {
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+}
+
+// BODY
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--clr-primary-accent);
+  display: grid;
+  align-items: center;
+  height: 65px;
+  padding: 0px 10px;
+  .header-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--clr-white-font);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      color: var(--clr-white-font);
+      font-family: var(--font-fancy);
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+    }
+    span {
+      padding: 0 10px;
+    }
+    .mobile-menu button {
+      background-color: transparent;
+      color: var(--clr-white-font);
+      cursor: pointer;
+    }
+    .mobile-menu svg {
+      font-size: 30px;
+      font-weight: var(--fw-regular);
+    }
+  }
+}
+
+main {
+  min-height: calc(100vh - 65px);
+  background-color: #000;
+  position: relative;
+}
+main::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  background: url(http://lavelo-react.wpocean.com/static/media/1.4390f2ac.jpg);
+  opacity: 0.5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+main .landing-content img {
+  height: 350px;
+  width: auto;
+}
+main .landing-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .text-content {
+  z-index: 5;
+  position: absolute;
+  color: var(--clr-white-font);
+  text-align: center;
+  h4 {
+    font-family: var(--font-primary);
+    font-weight: var(--fw-regular);
+    font-size: 15px;
+  }
+  h2 {
+    font-weight: var(--fw-extra-light);
+    font-family: var(--font-fancy);
+    font-size: 40px;
+    margin-top: 10px;
+  }
+}
+
+// couple
+.couple {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 65px auto;
+  h2 {
+    font-family: var(--font-fancy);
+    color: var(--clr-accent-font);
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .couple-tile {
+    display: flex;
+    align-items: center;
+    .tile-seperator img {
+      height: 150px;
+    }
+    .bride,
+    .groom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      font-family: var(--font-primary);
+    }
+    .tile-image {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    .name {
+      margin-bottom: 15px;
+      color: var(--clr-secondary-accent);
+    }
+    .detail {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}
+// welcome area
+.welcome-area {
+  background-color: var(--clr-primary-font);
+  background-image: url(Assets/welcomeArea.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--clr-white-font);
+  padding: 20px;
+  h2 {
+    font-family: var(--font-fancy);
+    font-size: 40px;
+    font-weight: var(--fw-light);
+    margin-bottom: 20px;
+  }
+  p {
+    max-width: 600px;
+    font-family: var(--font-primary);
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 35px;
+    border-radius: 20px;
+    color: var(--clr-primary-accent);
+    font-size: 14px;
+    font-weight: bolder;
+    letter-spacing: var(--letter-spacing);
+    cursor: pointer;
+    &:hover {
+      background-color: #1e7b67;
+      color: var(--clr-white-font);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 600px) {
+  main .landing-content img {
+    height: 270px;
+    width: auto;
+  }
+  .couple-tile {
+    flex-direction: column;
+    .tile-seperator {
+      display: none;
+    }
+  }
+}
