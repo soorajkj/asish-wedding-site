@@ -1,3 +1,4 @@
+import CountDown from "./Components/CountDown";
 import Couple from "./Components/Couple";
 import Header from "./Components/Header";
 import Landing from "./Components/Landing";
@@ -8,6 +9,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Landing />
+      <CountDown />
       <Couple />
       <WelcomeArea />
     </div>

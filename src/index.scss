@@ -153,6 +153,61 @@ main .text-content {
     margin-top: 10px;
   }
 }
+// countdown
+
+.countdown {
+  background: rgba(178, 201, 211, 0.1);
+  padding: 50px 20px;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  .countdown-wrapper {
+    max-width: 1100px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--clr-accent-font);
+    color: var(--clr-white-font);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    .countdown-textarea {
+      padding: 20px;
+      p {
+        font-family: var(--font-primary);
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-family: var(--font-fancy);
+        font-size: 40px;
+      }
+    }
+    .countdown-timer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      .timer {
+        margin: 5px;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        border: 0.5px solid var(--clr-white-font);
+        height: 130px;
+        width: 130px;
+      }
+      p {
+        font-family: var(--font-primary);
+        font-size: 14px;
+      }
+      h1 {
+        font-family: var(--font-fancy);
+        font-size: 50px;
+      }
+    }
+  }
+}
 
 // couple
 .couple {
@@ -165,6 +220,21 @@ main .text-content {
     font-size: 35px;
     margin-bottom: 50px;
     text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+      height: 40px;
+      width: auto;
+      background-image: url(Assets/underline.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
   .couple-tile {
     padding: 20px 0px;
@@ -178,7 +248,7 @@ main .text-content {
     }
   }
   .tile-image {
-    max-height: 280px;
+    max-height: 300px;
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
@@ -254,5 +324,9 @@ main .text-content {
     .tile-seperator img {
       display: none;
     }
+  }
+  // countdown
+  .countdown-timer {
+    justify-content: center;
   }
 }

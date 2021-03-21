@@ -184,6 +184,83 @@ main .text-content h2 {
   margin-top: 10px;
 }
 
+.countdown {
+  background: rgba(178, 201, 211, 0.1);
+  padding: 50px 20px;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countdown .countdown-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  padding: 30px;
+  background-color: var(--clr-accent-font);
+  color: var(--clr-white-font);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.countdown .countdown-wrapper .countdown-textarea {
+  padding: 20px;
+}
+
+.countdown .countdown-wrapper .countdown-textarea p {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.countdown .countdown-wrapper .countdown-textarea h2 {
+  font-family: var(--font-fancy);
+  font-size: 40px;
+}
+
+.countdown .countdown-wrapper .countdown-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+.countdown .countdown-wrapper .countdown-timer .timer {
+  margin: 5px;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 0.5px solid var(--clr-white-font);
+  height: 130px;
+  width: 130px;
+}
+
+.countdown .countdown-wrapper .countdown-timer p {
+  font-family: var(--font-primary);
+  font-size: 14px;
+}
+
+.countdown .countdown-wrapper .countdown-timer h1 {
+  font-family: var(--font-fancy);
+  font-size: 50px;
+}
+
 .couple {
   max-width: 1000px;
   padding: 20px;
@@ -196,6 +273,24 @@ main .text-content h2 {
   font-size: 35px;
   margin-bottom: 50px;
   text-align: center;
+  position: relative;
+}
+
+.couple h2::after {
+  content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  height: 40px;
+  width: auto;
+  background-image: url(Assets/underline.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .couple .couple-tile {
@@ -216,7 +311,7 @@ main .text-content h2 {
 }
 
 .couple .tile-image {
-  max-height: 280px;
+  max-height: 300px;
   max-width: 100%;
   height: auto;
   width: auto\9;
@@ -311,6 +406,11 @@ main .text-content h2 {
   }
   .couple-tile .tile-seperator img {
     display: none;
+  }
+  .countdown-timer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=index.css.map */
