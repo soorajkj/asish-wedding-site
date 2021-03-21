@@ -123,8 +123,10 @@ main::after {
   background-attachment: scroll;
 }
 main .landing-content img {
-  height: 350px;
-  width: auto;
+  max-height: 350px;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
 }
 main .landing-content {
   height: 100vh;
@@ -160,39 +162,44 @@ main .text-content {
     font-family: var(--font-fancy);
     color: var(--clr-accent-font);
     font-size: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
   }
   .couple-tile {
+    padding: 20px 0px;
     display: flex;
-    align-items: center;
-    .tile-seperator img {
-      height: 150px;
-    }
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-primary);
     .bride,
     .groom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      font-family: var(--font-primary);
-    }
-    .tile-image {
-      height: 250px;
-      width: 250px;
-      border-radius: 50%;
-      margin-bottom: 30px;
-    }
-    .name {
-      margin-bottom: 15px;
-      color: var(--clr-secondary-accent);
-    }
-    .detail {
-      font-size: 13px;
-      text-align: center;
+      padding: 10px;
     }
   }
+  .tile-image {
+    max-height: 280px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    border-radius: 50%;
+  }
+  .name {
+    color: var(--clr-secondary-accent);
+    margin: 20px 0px;
+  }
+  .detail {
+    margin-bottom: 40px;
+    font-size: 13px;
+  }
 }
+.tile-seperator {
+  display: flex;
+  align-items: center;
+  img {
+    width: 130px;
+  }
+}
+
 // welcome area
 .welcome-area {
   background-color: var(--clr-primary-font);
@@ -243,7 +250,7 @@ main .text-content {
   }
   .couple-tile {
     flex-direction: column;
-    .tile-seperator {
+    .tile-seperator img {
       display: none;
     }
   }

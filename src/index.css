@@ -143,8 +143,11 @@ main::after {
 }
 
 main .landing-content img {
-  height: 350px;
-  width: auto;
+  max-height: 350px;
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
 }
 
 main .landing-content {
@@ -190,54 +193,57 @@ main .text-content h2 {
   font-family: var(--font-fancy);
   color: var(--clr-accent-font);
   font-size: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
 .couple .couple-tile {
+  padding: 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.couple .couple-tile .tile-seperator img {
-  height: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: var(--font-primary);
 }
 
 .couple .couple-tile .bride,
 .couple .couple-tile .groom {
+  padding: 10px;
+}
+
+.couple .tile-image {
+  max-height: 280px;
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  border-radius: 50%;
+}
+
+.couple .name {
+  color: var(--clr-secondary-accent);
+  margin: 20px 0px;
+}
+
+.couple .detail {
+  margin-bottom: 40px;
+  font-size: 13px;
+}
+
+.tile-seperator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
-  font-family: var(--font-primary);
 }
 
-.couple .couple-tile .tile-image {
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  margin-bottom: 30px;
-}
-
-.couple .couple-tile .name {
-  margin-bottom: 15px;
-  color: var(--clr-secondary-accent);
-}
-
-.couple .couple-tile .detail {
-  font-size: 13px;
-  text-align: center;
+.tile-seperator img {
+  width: 130px;
 }
 
 .welcome-area {
@@ -302,7 +308,7 @@ main .text-content h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .couple-tile .tile-seperator {
+  .couple-tile .tile-seperator img {
     display: none;
   }
 }
