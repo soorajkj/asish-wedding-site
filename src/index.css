@@ -523,6 +523,9 @@ main .text-content h2 {
   font-family: var(--font-primary);
   font-size: 15px;
   color: var(--clr-secondary-accent);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .flip-ceremony {
