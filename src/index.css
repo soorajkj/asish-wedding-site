@@ -7,8 +7,13 @@
   --clr-primary-font: #212529;
   --clr-secondary-font: #616263;
   --clr-white-font: #fff;
-  --clr-gradient: linear-gradient(rgba(100, 158, 147, 0.5), rgba(0, 0, 0, 0.5));
-  --clr-gradient-light: rgba(192, 192, 192, 0.24);
+  --clr-gardient: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(#649e93)
+  );
   --font-fancy: "Great Vibes", cursive;
   --font-primary: "Mulish", sans-serif;
   --fw-extra-light: 200;
@@ -343,13 +348,12 @@ main .text-content h2 {
 }
 
 .welcome-area {
-  background-color: var(--clr-primary-font);
   background-image: url(Assets/welcomeArea.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 60vh;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,6 +366,25 @@ main .text-content h2 {
   text-align: center;
   color: var(--clr-white-font);
   padding: 20px;
+  position: relative;
+}
+
+.welcome-area::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#649e93));
+  background-image: linear-gradient(#000, #649e93);
+  opacity: 0.6;
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.welcome-area .content {
+  z-index: 20;
 }
 
 .welcome-area h2 {
@@ -391,6 +414,192 @@ main .text-content h2 {
 .welcome-area button:hover {
   background-color: #1e7b67;
   color: var(--clr-white-font);
+}
+
+.section-ceremony {
+  margin: 65px auto;
+  padding: 20px;
+}
+
+.section-ceremony .ceremony-heading {
+  font-family: var(--font-fancy);
+  color: var(--clr-accent-font);
+  font-size: 35px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.section-ceremony .ceremony-heading::after {
+  content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  height: 40px;
+  width: auto;
+  background-image: url(Assets/underline.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section-ceremony .ceremony-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-ceremony .ceremony {
+  background: #303e441a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
+  padding: 20px;
+}
+
+.section-ceremony .ceremony .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.section-ceremony .ceremony .left img {
+  max-height: 300px;
+  width: auto;
+}
+
+.section-ceremony .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  width: 500px;
+}
+
+.section-ceremony .title {
+  color: var(--clr-secondary-accent);
+  font-family: var(--font-fancy);
+  font-size: 30px;
+  font-weight: var(--fw-regular);
+  margin-bottom: 10px;
+}
+
+.section-ceremony span {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 14px;
+}
+
+.section-ceremony p {
+  margin: 10px 0;
+  font-family: var(--font-primary);
+  font-size: 15px;
+}
+
+.section-ceremony a {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  color: var(--clr-secondary-accent);
+}
+
+.flip-ceremony {
+  background: #303e441a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
+  padding: 20px;
+}
+
+.flip-ceremony .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.flip-ceremony .left img {
+  max-height: 300px;
+  width: auto;
+}
+
+.flip-ceremony .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  width: 500px;
+}
+
+.flip-ceremony .title {
+  color: var(--clr-secondary-accent);
+  font-family: var(--font-fancy);
+  font-size: 30px;
+  font-weight: var(--fw-regular);
+  margin-bottom: 10px;
+}
+
+.flip-ceremony span {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 14px;
+}
+
+.flip-ceremony p {
+  margin: 10px 0;
+  font-family: var(--font-primary);
+  font-size: 15px;
+}
+
+.flip-ceremony a {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  color: var(--clr-secondary-accent);
 }
 
 @media screen and (max-width: 600px) {

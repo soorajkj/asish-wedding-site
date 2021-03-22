@@ -9,8 +9,13 @@
   --clr-primary-font: #212529;
   --clr-secondary-font: #616263;
   --clr-white-font: #fff;
-  --clr-gradient: linear-gradient(rgba(100, 158, 147, 0.5), rgba(0, 0, 0, 0.5));
-  --clr-gradient-light: rgba(192, 192, 192, 0.24);
+  --clr-gardient: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(#649e93)
+  );
 
   // FONTS
   --font-fancy: "Great Vibes", cursive;
@@ -273,19 +278,34 @@ main .text-content {
 
 // welcome area
 .welcome-area {
-  background-color: var(--clr-primary-font);
   background-image: url(Assets/welcomeArea.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 60vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--clr-white-font);
   padding: 20px;
+  position: relative;
+  &::after {
+    background-image: linear-gradient(#000, #649e93);
+    opacity: 0.6;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .content {
+    z-index: 20;
+  }
   h2 {
     font-family: var(--font-fancy);
     font-size: 40px;
@@ -313,6 +333,134 @@ main .text-content {
   }
 }
 
+// Event
+.section-ceremony {
+  margin: 65px auto;
+  padding: 20px;
+  .ceremony-heading {
+    font-family: var(--font-fancy);
+    color: var(--clr-accent-font);
+    font-size: 35px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+      height: 40px;
+      width: auto;
+      background-image: url(Assets/underline.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .ceremony-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .ceremony {
+    background: #303e441a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 20px;
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .left img {
+      max-height: 300px;
+      width: auto;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 500px;
+  }
+  .title {
+    color: var(--clr-secondary-accent);
+    font-family: var(--font-fancy);
+    font-size: 30px;
+    font-weight: var(--fw-regular);
+    margin-bottom: 10px;
+  }
+  span {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 14px;
+  }
+  p {
+    margin: 10px 0;
+    font-family: var(--font-primary);
+    font-size: 15px;
+  }
+  a {
+    font-family: var(--font-primary);
+    font-size: 15px;
+    color: var(--clr-secondary-accent);
+  }
+}
+//flip
+.flip-ceremony {
+  background: #303e441a;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 20px;
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .left img {
+    max-height: 300px;
+    width: auto;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 500px;
+  }
+  .title {
+    color: var(--clr-secondary-accent);
+    font-family: var(--font-fancy);
+    font-size: 30px;
+    font-weight: var(--fw-regular);
+    margin-bottom: 10px;
+  }
+  span {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 14px;
+  }
+  p {
+    margin: 10px 0;
+    font-family: var(--font-primary);
+    font-size: 15px;
+  }
+  a {
+    font-family: var(--font-primary);
+    font-size: 15px;
+    color: var(--clr-secondary-accent);
+  }
+}
+
 // Media Queries
 @media screen and (max-width: 600px) {
   main .landing-content img {
@@ -329,4 +477,5 @@ main .text-content {
   .countdown-timer {
     justify-content: center;
   }
+  //
 }
