@@ -8,7 +8,7 @@ const Landing = () => {
           alt="love"
         />
         <div className="text-content">
-          <h4>WERE GETTING MARRIED</h4>
+          <h4>WE'RE GETTING MARRIED</h4>
           <h2>Save Our Date</h2>
           <h4>03 May 2021</h4>
         </div>
