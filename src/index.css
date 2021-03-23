@@ -221,18 +221,20 @@ main .text-content h2 {
 }
 
 .countdown .countdown-wrapper .countdown-textarea {
+  text-align: center;
   padding: 20px;
 }
 
 .countdown .countdown-wrapper .countdown-textarea p {
   font-family: var(--font-primary);
-  font-size: 18px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 
 .countdown .countdown-wrapper .countdown-textarea h2 {
   font-family: var(--font-fancy);
-  font-size: 40px;
+  font-size: 35px;
+  font-weight: var(--fw-light);
 }
 
 .countdown .countdown-wrapper .countdown-timer {
@@ -258,7 +260,7 @@ main .text-content h2 {
 
 .countdown .countdown-wrapper .countdown-timer p {
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .countdown .countdown-wrapper .countdown-timer h1 {
@@ -353,7 +355,7 @@ main .text-content h2 {
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 75vh;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

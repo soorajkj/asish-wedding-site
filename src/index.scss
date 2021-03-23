@@ -178,15 +178,17 @@ main .text-content {
     align-items: center;
     justify-content: space-around;
     .countdown-textarea {
+      text-align: center;
       padding: 20px;
       p {
         font-family: var(--font-primary);
-        font-size: 18px;
+        font-size: 13px;
         margin-bottom: 20px;
       }
       h2 {
         font-family: var(--font-fancy);
-        font-size: 40px;
+        font-size: 35px;
+        font-weight: var(--fw-light);
       }
     }
     .countdown-timer {
@@ -204,7 +206,7 @@ main .text-content {
       }
       p {
         font-family: var(--font-primary);
-        font-size: 14px;
+        font-size: 13px;
       }
       h1 {
         font-family: var(--font-fancy);
@@ -283,7 +285,7 @@ main .text-content {
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 75vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
