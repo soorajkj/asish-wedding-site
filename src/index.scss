@@ -362,13 +362,13 @@ main .text-content {
     }
   }
   .ceremony-wrapper {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 100px auto;
   }
   .ceremony {
     background: #303e441a;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin: 10px;
@@ -378,17 +378,21 @@ main .text-content {
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex: 1 1 auto;
     }
     .left img {
+      max-width: 100%;
       max-height: 300px;
-      width: auto;
+      width: auto\9; /* ie8 */
     }
   }
   .right {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 500px;
+    max-width: 600px;
+    flex: 1 1 auto;
+    margin: 0 auto;
   }
   .title {
     color: var(--clr-secondary-accent);
@@ -419,7 +423,7 @@ main .text-content {
   background: #303e441a;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 10px;
@@ -429,6 +433,7 @@ main .text-content {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    flex: 1 1 auto;
   }
   .left img {
     max-height: 300px;
@@ -438,7 +443,8 @@ main .text-content {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 500px;
+    width: 600px;
+    flex: 1 1 auto;
   }
   .title {
     color: var(--clr-secondary-accent);
@@ -480,5 +486,5 @@ main .text-content {
   .countdown-timer {
     justify-content: center;
   }
-  //
+  //  ceremony
 }
