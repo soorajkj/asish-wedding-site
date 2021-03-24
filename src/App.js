@@ -5,6 +5,7 @@ import Event from "./Components/Event";
 import Header from "./Components/Header";
 import Landing from "./Components/Landing";
 import WelcomeArea from "./Components/WelcomeArea";
+import Gallery from "./Components/Gallery";
 
 const App = () => {
   const [showTimer, setshowTimer] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
       <Couple />
       <WelcomeArea />
       <Event />
+      <Gallery />
     </div>
   );
 };

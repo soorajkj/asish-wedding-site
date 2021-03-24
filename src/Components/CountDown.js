@@ -1,5 +1,4 @@
 import React from "react";
-// import CounterTime from "./CounterTime";
 import { useTimer } from "react-timer-hook";
 
 const CountDown = ({ expiryTimestamp, expiryFunction }) => {
@@ -31,10 +30,6 @@ const CountDown = ({ expiryTimestamp, expiryFunction }) => {
             <h1>{seconds.toString().padStart(2, 0)}</h1>
             <p>SECONDS</p>
           </div>
-          {/* <CounterTime />
-          <CounterTime />
-          <CounterTime />
-          <CounterTime /> */}
         </div>
       </div>
     </section>

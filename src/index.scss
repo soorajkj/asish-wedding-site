@@ -9,6 +9,7 @@
   --clr-primary-font: #212529;
   --clr-secondary-font: #616263;
   --clr-white-font: #fff;
+  --clr-light-bg: rgba(178, 201, 211, 0.1);
   --clr-gardient: -webkit-gradient(
     linear,
     left top,
@@ -149,7 +150,7 @@ main .text-content {
   h4 {
     font-family: var(--font-primary);
     font-weight: var(--fw-regular);
-    font-size: 15px;
+    font-size: 16px;
   }
   h2 {
     font-weight: var(--fw-extra-light);
@@ -161,7 +162,7 @@ main .text-content {
 // countdown
 
 .countdown {
-  background: #303e441a;
+  background: var(--clr-light-bg);
   padding: 100px 20px;
   min-height: 50vh;
   display: flex;
@@ -169,7 +170,7 @@ main .text-content {
   .countdown-wrapper {
     max-width: 1100px;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
     background-color: var(--clr-accent-font);
     color: var(--clr-white-font);
     margin: 0 auto;
@@ -182,7 +183,7 @@ main .text-content {
       padding: 20px;
       p {
         font-family: var(--font-primary);
-        font-size: 13px;
+        font-size: 15px;
         margin-bottom: 20px;
       }
       h2 {
@@ -267,7 +268,7 @@ main .text-content {
   }
   .detail {
     margin-bottom: 40px;
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 .tile-seperator {
@@ -317,14 +318,14 @@ main .text-content {
   p {
     max-width: 600px;
     font-family: var(--font-primary);
-    font-size: 13px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
   }
   button {
     padding: 10px 35px;
     border-radius: 20px;
     color: var(--clr-primary-accent);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bolder;
     letter-spacing: var(--letter-spacing);
     cursor: pointer;
@@ -467,6 +468,59 @@ main .text-content {
     font-family: var(--font-primary);
     font-size: 15px;
     color: var(--clr-secondary-accent);
+  }
+}
+
+// Image Wrapper
+.section-gallery {
+  background: var(--clr-light-bg);
+  padding: 100px 0px;
+  .gallery {
+    display: flex;
+  }
+  h2 {
+    font-family: var(--font-fancy);
+    color: var(--clr-accent-font);
+    font-size: 35px;
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+      height: 40px;
+      width: auto;
+      background-image: url(Assets/underline.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .gallery-container {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .image-wrapper {
+      max-width: 340px;
+      height: auto;
+      margin: 10px;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all ease-in-out 500ms;
+      &:hover {
+        transform: scale(1.2) rotate(10deg);
+      }
+    }
   }
 }
 
