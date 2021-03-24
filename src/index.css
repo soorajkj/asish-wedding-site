@@ -228,7 +228,7 @@ main .text-content h2 {
 
 .countdown .countdown-wrapper .countdown-textarea p {
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 
@@ -334,7 +334,7 @@ main .text-content h2 {
 
 .couple .detail {
   margin-bottom: 40px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .tile-seperator {
@@ -400,7 +400,7 @@ main .text-content h2 {
 .welcome-area p {
   max-width: 600px;
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 30px;
 }
 
@@ -408,7 +408,7 @@ main .text-content h2 {
   padding: 10px 35px;
   border-radius: 20px;
   color: var(--clr-primary-accent);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bolder;
   letter-spacing: var(--letter-spacing);
   cursor: pointer;
@@ -522,18 +522,18 @@ main .text-content h2 {
 .section-ceremony span {
   display: block;
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .section-ceremony p {
   margin: 10px 0;
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .section-ceremony a {
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 13px;
   color: var(--clr-secondary-accent);
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -608,18 +608,18 @@ main .text-content h2 {
 .flip-ceremony span {
   display: block;
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .flip-ceremony p {
   margin: 10px 0;
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .flip-ceremony a {
   font-family: var(--font-primary);
-  font-size: 15px;
+  font-size: 13px;
   color: var(--clr-secondary-accent);
 }
 
