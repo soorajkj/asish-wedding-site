@@ -523,6 +523,63 @@ main .text-content {
     }
   }
 }
+// Thank You
+.thank-you {
+  height: 50vh;
+  background-color: var(--clr-primary-font);
+  background-image: url(http://lavelo-react.wpocean.com/static/media/1.412dab63.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: "";
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #000;
+    opacity: 0.4;
+  }
+  .text-content {
+    height: 100%;
+    color: var(--clr-white-font);
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text-box {
+      background: rgba(94, 154, 142, 0.6);
+      padding: 50px 70px;
+      text-align: center;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: -5px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+        background-color: transparent;
+        z-index: 100;
+        border: 1px solid var(--clr-white-font);
+      }
+    }
+    h2 {
+      font-family: var(--font-fancy);
+      font-weight: var(--fw-regular);
+      font-size: 50px;
+    }
+    h4 {
+      font-family: var(--font-primary);
+      font-size: 16px;
+      font-weight: var(--fw-regular);
+    }
+  }
+}
 
 // Media Queries
 @media screen and (max-width: 600px) {

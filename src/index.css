@@ -695,6 +695,77 @@ main .text-content h2 {
           transform: scale(1.2) rotate(10deg);
 }
 
+.thank-you {
+  height: 50vh;
+  background-color: var(--clr-primary-font);
+  background-image: url(http://lavelo-react.wpocean.com/static/media/1.412dab63.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.thank-you::after {
+  content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+.thank-you .text-content {
+  height: 100%;
+  color: var(--clr-white-font);
+  position: relative;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thank-you .text-content .text-box {
+  background: rgba(94, 154, 142, 0.6);
+  padding: 50px 70px;
+  text-align: center;
+  position: relative;
+}
+
+.thank-you .text-content .text-box::after {
+  position: absolute;
+  content: "";
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background-color: transparent;
+  z-index: 100;
+  border: 1px solid var(--clr-white-font);
+}
+
+.thank-you .text-content h2 {
+  font-family: var(--font-fancy);
+  font-weight: var(--fw-regular);
+  font-size: 50px;
+}
+
+.thank-you .text-content h4 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+}
+
 @media screen and (max-width: 600px) {
   main .landing-content img {
     height: 270px;
